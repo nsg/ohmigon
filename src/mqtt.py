@@ -2,10 +2,10 @@ import random
 
 from paho.mqtt import client as mqtt_client
 
-class MQTT:
 
+class MQTT:
     def __init__(self, broker, topic_base, username, password, port=1883):
-        client_id = f'python-mqtt-{random.randint(0, 1000)}'
+        client_id = f"python-mqtt-{random.randint(0, 1000)}"
 
         self.client = mqtt_client.Client(client_id)
         self.client.username_pw_set(username, password)

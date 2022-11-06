@@ -1,7 +1,7 @@
 import serial
 
-class Ohmigo:
 
+class Ohmigo:
     def __init__(self, device):
         self.ser = serial.Serial(device, timeout=1)
 
@@ -27,4 +27,3 @@ class Ohmigo:
             return True
         print(f"E: {res}", flush=True)
         return False
-
