@@ -31,7 +31,7 @@ def set_temperature(temperature, table="outdoor"):
     mq.publish("kilo_ohm", k_ohm)
     mq.publish("temperature", temperature)
     mq.publish("updated_at", cur_datetime())
-    print(f"set kilo_ohm={k_ohm}; set temperature={temperature}")
+    print(f"set kilo_ohm={k_ohm}; set temperature={temperature}", flush=True)
 #
 # Setup MQTT connection and subscribe for messages
 #
