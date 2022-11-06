@@ -1,6 +1,11 @@
 # Ohmigon
 
-A addon to control Ohmigo-USB from Home Assistant. At the moment this is mostly written for my needs where I controls and Elomax 250 with values specific for my needs. If you find this useful feel free to contribute and/or ask me for assistance. I'm happy to make this a more generic addon in the future.
+A add-on to control Ohmigo-USB from Home Assistant. At the moment this is mostly written for my needs where I controls an Elomax 250 with values specific for my needs. If you find this useful feel free to contribute and/or ask me for assistance. I'm happy to make this a more generic addon in the future.
+
+## Possible improvements
+
+* I have hard coded temperature/ohm values for my specific needs. This should of course move over to the configuration.
+* Figure out _why_ `uart: true` do not work, remove the need for `full_access`.
 
 ## Install
 
