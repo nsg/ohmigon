@@ -21,7 +21,7 @@ class MQTT:
             print("Failed to connect, return code %d\n", rc, flush=True)
 
     def publish(self, topic, message):
-        result = self.client.publish(f"{self.topic_base}/{topic}", message)
+        result = self.client.publish(f"{self.topic_base}/{topic}", message, retain=True)
         if result[0] != 0:
             print(f"Failed to publish to topic {self.topic_base}/{topic}", flush=True)
 
