@@ -24,7 +24,7 @@ def cur_datetime():
 
 
 def process_set_temperature(client, userdata, msg):
-    set_temperature(int(msg.payload.decode()))
+    set_temperature(int(float(msg.payload.decode())))
 
 
 def set_temperature(temperature, table="outdoor"):
