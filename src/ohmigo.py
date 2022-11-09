@@ -23,7 +23,8 @@ class Ohmigo:
     def atr(self, r):
         self.write(f"ATR={r:.2f},ACK")
         res = self.response()
-        if res[0].split(",")[1] == "OK":
-            return True
+        if len(res) == 1 and res[0] != '':
+            if res[0].split(",")[1] == "OK":
+                return True
         print(f"E: {res}", flush=True)
         return False
