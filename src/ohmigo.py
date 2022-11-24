@@ -24,7 +24,8 @@ class Ohmigo:
         self.write(f"ATR={r:.2f},ACK")
         res = self.response()
         if len(res) == 1 and res[0] != '':
-            if res[0].split(",")[1] == "OK":
+            value = res[0].split(",")
+            if len(value) > 0 and value[1] == "OK":
                 return True
         print(f"E: {res}", flush=True)
         return False
