@@ -16,7 +16,7 @@ build:
 		"env \$$(awk '/SUPERVISOR_TOKEN/{ print \$$2 }' /etc/profile.d/homeassistant.sh) ha addons rebuild local_${ADDON_NAME}"
 
 test:
-	pytest
+	. .env/bin/activate && pytest
 
 restart:
 	@echo "ha addons restart local_${ADDON_NAME}"
